@@ -1,0 +1,103 @@
+@import "components/_variables.scss";
+
+.error {
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 0.375rem;
+}
+
+.loader {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0.375rem;
+}
+
+.cats {
+  width: 100%;
+
+  &__container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-gap: 1em;
+    background-color: #fff;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 0.375rem;
+
+    .list-group {
+      overflow-y: auto;
+    }
+
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    }
+
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    @media screen and (max-width: 601px) {
+      margin: 10px;
+      padding: 15px;
+      grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+    }
+  }
+
+  .active-desc {
+    height: auto;
+    display: block;
+    padding: 20px;
+    margin: 30px;
+    visibility: inherit;
+    transition: 0.3s ease;
+  }
+
+  &__desc-text {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+  &__desc {
+    background-color: #fff;
+    border-radius: 0.375rem;
+    text-align: center;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+
+    .btn-warning {
+      visibility: hidden;
+    }
+
+    transition: 0.3s ease;
+  }
+  .show-btn {
+    visibility: inherit;
+  }
+
+  transition: 0.3s ease;
+
+  &__image {
+    .active {
+      transform: scale(1.1);
+    }
+  }
+
+  &__image img {
+    width: 100%;
+    transition: 0.3s ease;
+  }
+
+  .list-group-item {
+    padding: 10px 20px;
+    border-radius: 0.375rem;
+    background-color: #d0d0d0;
+    min-height: 48px;
+  }
+}
